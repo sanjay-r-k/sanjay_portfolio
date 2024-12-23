@@ -1,0 +1,129 @@
+.footer {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.footer__container {
+    padding: 2rem 0 6rem;
+
+}
+
+.footer__link {
+    color: rgb(145, 144, 144);
+    
+    
+    
+}
+
+.footer__title {
+    text-align: center;
+    margin-bottom: var(--mb-2);
+    color: orange;
+}
+
+.footer__link:hover {
+    color: var(--title-color-dark);
+}
+
+.footer__list {
+    display: flex;
+    justify-content: center;
+    column-gap: 1.5rem;
+    margin-bottom: var(--mb-2);
+}
+
+
+.footer__social {
+    display: flex;
+    justify-content: center;
+    column-gap: 1.25rem;
+}
+
+.footer__social-link {
+    background-color: var(--title-color);
+    color: var(--container-color);
+    font-size: 1.25rem;
+    padding: 0.4rem;
+    border-radius: 0.5rem;
+    display: inline-flex;
+}
+
+.footer__social-link:hover {
+    background-color: var(--title-color-dark);
+    
+}
+
+.footer__copy {
+    display: block;
+    margin-top: 4.5rem;
+    color: var(--title-color);
+    text-align: center;
+    font-size: var(--smaller-font-size);
+}
+
+/* Responsive Design - Breakpoints */
+
+/* Tablet screens (max-width: 992px) */
+@media screen and (max-width: 992px) {
+    .footer__container {
+        padding: 2rem 1.5rem 5rem; /* Reduce padding */
+    }
+
+    .footer__list {
+        flex-direction: column; /* Stack the list items vertically */
+        align-items: center; /* Center the items */
+        column-gap: 0; /* Remove column-gap */
+    }
+
+    .footer__social {
+        justify-content: center; /* Center social icons */
+    }
+
+    .footer__social-link {
+        padding: 0.5rem;
+        font-size: 1.125rem;
+        border-radius: 0.3rem; /* Slightly smaller radius */
+    }
+
+    .footer__copy {
+        margin-top: 3rem; /* Reduce margin at the top */
+        font-size: var(--smaller-font-size); /* Adjust font size */
+    }
+}
+
+/* Mobile screens (max-width: 768px) */
+@media screen and (max-width: 768px) {
+    .footer__list {
+        flex-direction: column; /* Stack list items vertically */
+        align-items: center; /* Center the items */
+        margin-bottom: var(--mb-1); /* Reduce margin */
+    }
+
+    .footer__social {
+        justify-content: center; /* Center social icons */
+        flex-wrap: wrap; /* Allow wrapping on small screens */
+    }
+
+    .footer__social-link {
+        padding: 0.25rem;
+        font-size: 1rem;
+        border-radius: 0.25rem; /* Smaller padding and border radius */
+    }
+
+    .footer__copy {
+        margin-top: 2.5rem; /* Reduce margin at the top */
+        font-size: var(--smaller-font-size); /* Adjust font size */
+    }
+}
+
+/* Small mobile screens (max-width: 350px) */
+@media screen and (max-width: 350px) {
+    .footer__social-link {
+        padding: 0.25rem;
+        font-size: 0.9rem; /* Further reduce font size */
+    }
+
+    .footer__copy {
+        margin-top: 2rem; /* Reduce margin further */
+        font-size: var(--smaller-font-size); /* Adjust font size */
+    }
+}
