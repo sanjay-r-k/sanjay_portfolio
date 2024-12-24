@@ -242,3 +242,30 @@ label{
 span{
     color: red;
 }   
+/* Adjust margins for smaller screens (max-width: 576px or 350px) */
+@media screen and (max-width: 576px) {
+    body {
+        margin: 2px;
+    }
+
+    .container {
+        margin-left: 2px; /* Reduced margin on the left */
+        margin-right: 2px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    :root {
+        --big-font-size: 2.25rem;
+    }
+
+    .container {
+        margin-left: 2px; /* Reduced margin on the left */
+        margin-right: 2px;
+    }
+
+    /* Optional: Apply specific margin to body if needed */
+    body {
+        margin: 2px;
+    }
+}
