@@ -65,7 +65,7 @@ const Data = () => {
            Full developer dedicated to design and develop creative solutions.
         </p>
 
-        <a href="#contact" className="button button--flex">
+        <a href="#contact" className="button button--flex ">
             Say Hello
             <svg
                 class="button__icon"
