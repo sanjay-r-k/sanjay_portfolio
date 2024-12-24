@@ -7,13 +7,13 @@ import Info from "./Info";
 const About = () => {
   return (
     <section className="about section" id="about">
-        <h2 className="section__title">About Me</h2>
-        <span className="section__subtitle">A short introduction</span>
+        <h2 className="section__title fs-1">About Me</h2>
+        <span className="section__subtitle text-md">A short introduction</span>
         <div className="about__container container grid">
             <img src={AboutImg} alt="about" className="about__img" />
             <div className="about__data">
                 <Info />
-                <p className="about__description">
+                <p className="about__description fs-6">
                 🚀 Enthusiastic about exploring the boundless potential of web technologies! 
                 🌐 Armed with practical expertise in constructing scalable applications, 
                 I'm committed to an ongoing quest for knowledge and development. 

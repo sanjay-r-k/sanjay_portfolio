@@ -4,7 +4,7 @@ import './header.css';
 import { HiOutlineHome, HiOutlineUser, HiOutlineBadgeCheck, HiOutlinePhotograph, HiOutlineMail, HiX, HiOutlineMenu } from "react-icons/hi";
 
 const Header = ({ isDarkMode, toggleDarkMode }) => {
-  // Handle scroll effect for the header
+  
   useEffect(() => {
     const handleScroll = () => {
       const header = document.querySelector(".header");
@@ -19,7 +19,7 @@ const Header = ({ isDarkMode, toggleDarkMode }) => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Handle dark mode toggle on the body
+ 
   useEffect(() => {
     if (isDarkMode) {
       document.body.classList.add('dark-mode');

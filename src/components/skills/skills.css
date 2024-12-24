@@ -33,6 +33,7 @@
     display: grid;
     align-items: flex-start;
     row-gap: 1rem;
+    padding: 20px;
 }
 
 .skills__data {

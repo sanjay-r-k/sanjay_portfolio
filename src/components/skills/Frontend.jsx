@@ -4,28 +4,28 @@ import { HiCheckBadge } from "react-icons/hi2";
 const Frontend = () => {
     return (
         <div className="skills__content">
-            <h3 className="skills__title">Frontend Developer</h3>
+            <h3 className="skills__title fs-4">Frontend Developer</h3>
             <div className="skills__box">
                 <div className="skills__group">
                     <div className="skills__data">
                         <HiCheckBadge />
                         <div>
-                            <h3 className="skills__name">HTML</h3>
-                            <span className="skills__level">Advanced</span>
+                            <h3 className="skills__name fs-5">HTML</h3>
+                            <span className="skills__level text-lg">Advanced</span>
                         </div>
                     </div>
                     <div className="skills__data">
                         <HiCheckBadge />
                         <div>
-                            <h3 className="skills__name">CSS</h3>
-                            <span className="skills__level">Advanced</span>
+                            <h3 className="skills__name fs-5">CSS</h3>
+                            <span className="skills__level text-lg">Advanced</span>
                         </div>
                     </div>
                     <div className="skills__data">
                         <HiCheckBadge />
                         <div>
-                            <h3 className="skills__name">Bootstrap</h3>
-                            <span className="skills__level">Intermediate</span>
+                            <h3 className="skills__name fs-5">Bootstrap</h3>
+                            <span className="skills__level text-lg">Intermediate</span>
                         </div>
                     </div>
                 </div>
@@ -33,23 +33,23 @@ const Frontend = () => {
                     <div className="skills__data">
                         <HiCheckBadge />
                         <div>
-                            <h3 className="skills__name">JavaScript</h3>
-                            <span className="skills__level">Intermediate</span>
+                            <h3 className="skills__name fs-5">JavaScript</h3>
+                            <span className="skills__level text-lg">Intermediate</span>
                         </div>
                     </div>
 
                     <div className="skills__data">
                         <HiCheckBadge />
                         <div>
-                            <h3 className="skills__name">React</h3>
-                            <span className="skills__level">Basic</span>
+                            <h3 className="skills__name fs-5">React</h3>
+                            <span className="skills__level text-lg">Basic</span>
                         </div>
                     </div>
                     <div className="skills__data">
                         <HiCheckBadge />
                         <div>
-                            <h3 className="skills__name">JQuery</h3>
-                            <span className="skills__level">Intermediate</span>
+                            <h3 className="skills__name fs-5">JQuery</h3>
+                            <span className="skills__level text-lg">Intermediate</span>
                         </div>
                     </div>
                 </div>

@@ -43,17 +43,17 @@ const Contact = () => {
 
     return (
         <section className="contact section" id="contact">
-            <h2 className="section__title">Let's Connect</h2>
-            <span className="section__subtitle">Contact Me</span>
+            <h2 className="section__title fs-1">Let's Connect</h2>
+            <span className="section__subtitle text-md">Contact Me</span>
 
             <div className="contact__container container grid">
                 <div className="contact__content">
-                    <h3 className="contact__title">Talk to me</h3>
+                    <h3 className="contact__title fs-5">Talk to me</h3>
                     <div className="contact__info">
                         <div className="contact__card">
                             <HiOutlineMail className="contact__card-icon" />
                             <h3 className="contact__card-title">Email</h3>
-                            <span className="contact__card-data">sanjayravikomathi@gmail.com</span>
+                            <span className="contact__card-data fs-6">sanjayravikomathi@gmail.com</span>
                             <a href="#contact" className="contact__button">
                                 Write Me{" "}
                                 <HiOutlineArrowSmRight className="contact__button-icon" />
@@ -63,7 +63,7 @@ const Contact = () => {
                 </div>
 
                 <div className="contact__content">
-                    <h3 className="contact__title">Tell me, How can I help you?</h3>
+                    <h3 className="contact__title fs-5">Tell me, How can I help you?</h3>
 
                     <form ref={form} onSubmit={sendEmail} className="contact__form">
                         <div className="contact__form-div">

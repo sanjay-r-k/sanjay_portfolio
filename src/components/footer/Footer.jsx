@@ -6,22 +6,22 @@ const Footer = () => {
   return (
     <footer className="footer">
         <div className="footer__container container">
-            <h1 className="footer__title">Where To?</h1>
+            <h1 className="footer__title fs-1">Where To?</h1>
             <ul className="footer__list">
                 <li>
-                    <a href="#home" className="footer__link">Home</a>
+                    <a href="#home" className="footer__link fs-4">Home</a>
                 </li>
                 <li>
-                    <a href="#about" className="footer__link">About</a>
+                    <a href="#about" className="footer__link fs-4">About</a>
                 </li>
                 <li>
-                    <a href="#skills" className="footer__link">Skills</a>
+                    <a href="#skills" className="footer__link fs-4">Skills</a>
                 </li>
                 <li>
-                    <a href="#portfolio" className="footer__link">Projects</a>
+                    <a href="#portfolio" className="footer__link fs-4">Projects</a>
                 </li>
                 <li>
-                    <a href="#contact" className="footer__link">Contact</a>
+                    <a href="#contact" className="footer__link fs-4">Contact</a>
                 </li>
               
             </ul>

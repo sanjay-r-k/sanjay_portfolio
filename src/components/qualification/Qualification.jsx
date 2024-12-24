@@ -12,11 +12,11 @@ const Qualification = () => {
 
     return (
         <section className="qualification section">
-            <h2 className="section__title">Qualification</h2>
-            <span className="section__subtitle">My Journey</span>
+            <h2 className="section__title fs-1">Qualification</h2>
+            <span className="section__subtitle text-md">My Journey</span>
 
             <div className="qualification__container container">
-                <div className="qualification__tabs">
+                <div className="qualification__tabs fs-4">
                     <div className={toggleState === 1 ? "qualification__button button--flex qualification__active"
                         : "qualification__button button--flex light"} onClick={() => toggleTab(1)}>
                         <HiOutlineAcademicCap className="qualification__icon" />

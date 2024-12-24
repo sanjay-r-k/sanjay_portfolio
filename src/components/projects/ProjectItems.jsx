@@ -40,13 +40,13 @@ const ProjectItems = ({ item }) => {
             <div className={toggleState === 1 ? "services__modal active-modal" : "services__modal"}>
                 <div className="services__modal-content">
                     <HiX onClick={() => toggleTab(0)} className="services__modal-close" />
-                    <h3 className="services__modal-title">{projectDetails[item.id]?.title}</h3>
-                    <p className="services__modal-description">{projectDetails[item.id]?.description}</p>
+                    <h3 className="services__modal-title fs-4">{projectDetails[item.id]?.title}</h3>
+                    <p className="services__modal-description fs-6">{projectDetails[item.id]?.description}</p>
                     <ul className="services__modal-services grid">
                         {projectDetails[item.id]?.services.map((service, index) => (
                             <li key={index} className="services__modal-service">
                                
-                                <p className="services__modal-info">{service}</p>
+                                <p className="services__modal-info fs-6">{service}</p>
                             </li>
                         ))}
                     </ul>
