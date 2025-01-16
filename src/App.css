@@ -269,3 +269,70 @@ span{
         margin: 2px;
     }
 }
+/* Particle Background */
+@keyframes particleAnimation {
+    0% {
+        transform: translate(0, 0); /* Initial position */
+        opacity: 1;
+    }
+    100% {
+        transform: translate(100vw, 100vh); /* Move diagonally to bottom-right */
+        opacity: 0.6; /* Fade out as particles fall */
+    }
+}
+
+.particles {
+    position: fixed; /* Particles should stay in place during scroll */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1; /* Keep particles behind content */
+}
+
+.particle {
+    position: absolute;
+    font-size: 16px; /* Snowflake symbol size */
+    color: #719dc7; /* Light blue color for snowflakes */
+    animation: particleAnimation 6s linear infinite; /* Snowflakes falling animation */
+    opacity: 0.8;
+    animation-timing-function: ease-in; /* Smooth falling effect */
+    /* Randomize initial position and size for each particle */
+    animation-delay: calc(-5s * random());
+}
+
+.particle::before {
+    content: '❄'; /* Snowflake symbol */
+    font-size: inherit; /* Inherit font size from the parent element */
+    display: inline-block; /* Ensure it behaves like a normal element */
+}
+
+.particle:nth-child(odd) {
+    animation-duration: 8s; /* Slower snowflakes */
+    font-size: 12px; /* Smaller snowflakes */
+}
+
+.particle:nth-child(even) {
+    animation-duration: 4s; /* Faster snowflakes */
+    font-size: 20px; /* Larger snowflakes */
+}
+
+/* Dark Mode */
+body[data-theme='dark'] .particle--light::before {
+    color: #ffffff; /* Light snowflakes for dark mode */
+}
+
+/* Light Mode */
+body[data-theme='light'] .particle--dark::before {
+    color: #ffffff; /* Light snowflakes for light mode */
+}
+
+.main {
+    position: relative;
+    z-index: 1; /* Ensure content stays above particles */
+}
+
+.header, .footer {
+    z-index: 1; /* Ensure header and footer stay above particles */
+}

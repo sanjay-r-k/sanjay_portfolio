@@ -1,0 +1,120 @@
+.scratch-card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+  text-align: center;
+  color: rgb(6, 34, 101);
+}
+
+.scratch-card-container h2 {
+  font-family: Arial, sans-serif;
+  margin-bottom: 20px;
+}
+
+.canvas-container {
+  position: relative;
+  display: inline-block;
+  box-shadow: 0 0 5px #fff, 0 0 10px #ff007f, 0 0 20px #ff007f, 0 0 30px #ff007f, 0 0 40px #ff007f, 0 0 50px #ff007f, 0 0 75px #ff007f;
+  animation: neonGlow 1.5s infinite alternate;
+  border-radius: 20%;
+}
+
+.scratch-canvas {
+  cursor: grab;
+  border-radius: 20%;
+}
+
+.fullpage {
+  margin: 5%;
+}
+
+.quote {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(236, 237, 232);
+  font-size: 18px;
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px;
+  box-sizing: border-box;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1s, visibility 1s;
+}
+
+.quote.revealed {
+  opacity: 1;
+  visibility: visible;
+  border-radius: 20%;
+}
+
+@keyframes neonGlow {
+  0% {
+    box-shadow: 0 0 2px #fff, 0 0 2px #ff007f, 0 0 2px #ff007f, 0 0 3px #ff007f, 0 0 4px #ff007f, 0 0 5px #ff007f, 0 0 7px #ff007f;
+  }
+  100% {
+    box-shadow: 0 0 2px #ff007f, 0 0 15px #fff, 0 0 15px #fff, 0 0 20px #ff007f, 0 0 4px #ff007f, 0 0 5px #ff007f, 0 0 7px #ff007f;
+  }
+}
+
+/* Star container */
+.star-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+/* Star shape (using clip-path to create a star shape) */
+.star {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background-color: rgb(201, 190, 39);
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  animation: starBurst 2s ease-out forwards;
+}
+
+/* Animation for star burst effect */
+@keyframes starBurst {
+  0% {
+    transform: scale(1) translate(0, 0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0) translate(200px, 200px);
+    opacity: 0;
+  }
+}
+
+/* For smaller screens (mobile), adjust star size and positioning */
+@media (max-width: 768px) {
+  .star {
+    width: 8px; /* Smaller stars for mobile */
+    height: 8px;
+  }
+
+  .star-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+.emoji{
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
