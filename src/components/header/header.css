@@ -1,3 +1,4 @@
+
 /* General Header Styles */
 .header {
     width: 100%;
@@ -176,7 +177,7 @@ body {
 
 /* Dark mode for nav menu compartment */
 .dark-mode .nav__menu {
-    background-color: hsl(0, 0%, 20%); /* Dark background for the menu compartment */
+    background-color: hsl(0, 0%, 1%); /* Dark background for the menu compartment */
  
 }
 
@@ -201,7 +202,7 @@ body {
 
 /* Dark mode for scroll header (if used) */
 .dark-mode .scroll-header {
-    background-color: #1f1f1f; /* Dark background when scrolling */
+    background-color: #000000; /* Dark background when scrolling */
 }
 .dark-mode .active-link{
     color: yellowgreen;
@@ -213,7 +214,7 @@ body.dark-mode {
   }
   
   .header.dark-mode {
-    background-color: #333;
+    background-color: #000000;
   }
   
   /* New dark/light toggle switch styles */
@@ -287,3 +288,10 @@ body.dark-mode {
     z-index: 10; 
     margin-top: -50px;
   }
+  
+.logo{
+    border-radius: 50%;
+}
+.nav__item{
+    padding-top: 5%;
+}

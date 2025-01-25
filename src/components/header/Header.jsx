@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import './header.css';
-// Make sure this file contains the dark mode styles
+import img from '../../assets/logo.png'
 import { HiOutlineHome, HiOutlineUser, HiOutlineBadgeCheck, HiOutlinePhotograph, HiOutlineMail, HiX, HiOutlineMenu } from "react-icons/hi";
 
 const Header = ({ isDarkMode, toggleDarkMode }) => {
@@ -34,7 +34,8 @@ const Header = ({ isDarkMode, toggleDarkMode }) => {
   return (
     <header className={`header ${isDarkMode ? 'dark-mode' : ''}`}>
       <nav className="nav container">
-        <a href="index.html" className="nav__logo">Portfolio</a>
+        <div><img src={img} alt="logo"className="logo" width={50} height={50} /><a href="index.html" className="nav__logo">Sanjay</a></div>
+        
         <div className={Toggle ? "nav__menu show-menu" : "nav__menu"}>
           <ul className="nav__list grid">
             <li className="nav__item">

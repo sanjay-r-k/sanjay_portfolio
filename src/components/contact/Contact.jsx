@@ -1,7 +1,9 @@
 import React, { useRef, useState } from 'react';
 import "./contact.css";
 import { HiOutlineMail, HiOutlineArrowSmRight } from "react-icons/hi";
+import { FaHeadset } from 'react-icons/fa';
 import emailjs from '@emailjs/browser';
+import contact from '../../assets/contact1.png'
 
 const Contact = () => {
     const form = useRef();
@@ -43,7 +45,7 @@ const Contact = () => {
 
     return (
         <section className="contact section" id="contact">
-            <h2 className="section__title fs-1">Let's Connect</h2>
+            <h2 className="section__title fs-1"> <FaHeadset/> Let's Connect</h2>
             <span className="section__subtitle text-md">Contact Me</span>
 
             <div className="contact__container container grid">
@@ -60,6 +62,7 @@ const Contact = () => {
                             </a>
                         </div>
                     </div>
+                    <img src={contact} className='contact__img' alt="" />
                 </div>
 
                 <div className="contact__content">

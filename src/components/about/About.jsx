@@ -1,13 +1,14 @@
 import React from 'react';
 import "./about.css";
-import AboutImg from "../../assets/aboutBW.jpeg";
+import AboutImg from "../../assets/sanjaybw.png";
 import CV from "../../assets/SANJAY R.pdf";
 import Info from "./Info";
+import {IoPerson} from 'react-icons/io5'
 
 const About = () => {
   return (
     <section className="about section" id="about">
-        <h2 className="section__title fs-1">About Me</h2>
+        <h2 className="section__title fs-1"><IoPerson/> About Me</h2>
         <span className="section__subtitle text-md">A short introduction</span>
         <div className="about__container container grid">
             <img src={AboutImg} alt="about" className="about__img" />
@@ -19,7 +20,7 @@ const About = () => {
                 I'm committed to an ongoing quest for knowledge and development. 
                 Every day, I welcome fresh challenges as opportunities to sculpt my professional path and enhance my personal journey🌟.
                 </p>
-                <a download="SANJAY R" href={CV} className="button button--flex">
+                <a download="SANJAY R" href={CV} className="button button--flex text-light">
                     Download CV
                     <svg
                         class="button__icon"

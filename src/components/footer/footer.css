@@ -2,16 +2,9 @@
     border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.footer__container {
-    padding: 2rem 0 6rem;
-
-}
 
 .footer__link {
-    color: rgb(145, 144, 144);
-    
-    
-    
+    color: rgb(103, 97, 97);  
 }
 
 .footer__title {
@@ -25,7 +18,7 @@
 }
 
 .footer__list {
-    display: flex;
+    display: block;
     justify-content: center;
     column-gap: 1.5rem;
     margin-bottom: var(--mb-2);
@@ -65,7 +58,7 @@
 /* Tablet screens (max-width: 992px) */
 @media screen and (max-width: 992px) {
     .footer__container {
-        padding: 2rem 1.5rem 5rem; /* Reduce padding */
+        padding: 2rem 1.5rem 2rem; /* Reduce padding */
     }
 
     .footer__list {
@@ -126,4 +119,11 @@
         margin-top: 2rem; /* Reduce margin further */
         font-size: var(--smaller-font-size); /* Adjust font size */
     }
+}
+.foot{
+    text-align: center;
+    padding-bottom: 10px;
+}
+.footer__container{
+    margin-top: 5%;
 }

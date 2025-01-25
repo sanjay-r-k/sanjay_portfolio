@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./qualification.css";
 
 import { HiOutlineAcademicCap, HiOutlineBriefcase, HiOutlineCalendar } from "react-icons/hi";
+import { FaGraduationCap } from "react-icons/fa";
 
 const Qualification = () => {
     const [toggleState, setToggleState] = useState(1)
@@ -12,7 +13,7 @@ const Qualification = () => {
 
     return (
         <section className="qualification section">
-            <h2 className="section__title fs-1">Qualification</h2>
+            <h2 className="section__title fs-1"><FaGraduationCap/> Qualification</h2>
             <span className="section__subtitle text-md">My Journey</span>
 
             <div className="qualification__container container">

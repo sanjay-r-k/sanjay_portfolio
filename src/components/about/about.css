@@ -5,9 +5,13 @@
 }
 
 .about__img {
-    width: 350px;
+    width: 100%;
     border-radius: 1.5rem;
     justify-self: center;
+    height: 92%;
+    filter: grayscale(100%);
+  transition: filter 0.3s ease;
+    
 }
 
 .about__info {
@@ -91,9 +95,7 @@
    }
 }
 .about__img:hover{
-    filter: drop-shadow(0.3rem 0.3rem 0.3rem rgba(201, 236, 2, 0.786));
-   
-    
+    filter: drop-shadow(0.1rem 0.1rem 1.5rem  rgba(247, 51, 77, 0.786));
 }
 .section__subtitle {
     color: rgb(174, 93, 249);
