@@ -6,7 +6,7 @@ import projectImage from '../../assets/emoji.webp';
 const quotes = [
   "The only way to do great work is to love what you do.",
   "Believe you can and you're halfway there.",
-  "Success is not the key to happiness. Happiness is the key to success. ",
+  "Success is not the key to happiness. Happiness is the key to success.",
   "It does not matter how slowly you go as long as you do not stop.",
   "Life is what happens when you're busy making other plans.",
   "Nothing is impossible, the word itself says I'm possible.",
@@ -31,7 +31,7 @@ const ScratchCardComponent = () => {
     ctxRef.current.fillRect(0, 0, canvasRef.current.width, canvasRef.current.height);
   }, []);
 
-  // Handle Scratch
+  // Handle Scratch (Mouse Event)
   const handleScratch = (e) => {
     const canvas = canvasRef.current;
     const ctx = ctxRef.current;
@@ -48,6 +48,7 @@ const ScratchCardComponent = () => {
     checkIfScratched(canvas);
   };
 
+  // Handle Scratch (Touch Event)
   const handleTouchScratch = (e) => {
     e.preventDefault(); // Prevent scrolling when touching
     const canvas = canvasRef.current;
@@ -110,17 +111,13 @@ const ScratchCardComponent = () => {
   }, [scratchedPercentage]);
 
   const startScratching = () => {
-    if (canvasRef.current) {
-      canvasRef.current.addEventListener('mousemove', handleScratch);
-      canvasRef.current.addEventListener('touchmove', handleTouchScratch, { passive: false });
-    }
+    canvasRef.current.addEventListener('mousemove', handleScratch);
+    canvasRef.current.addEventListener('touchmove', handleTouchScratch, { passive: false });
   };
 
   const stopScratching = () => {
-    if (canvasRef.current) {
-      canvasRef.current.removeEventListener('mousemove', handleScratch);
-      canvasRef.current.removeEventListener('touchmove', handleTouchScratch);
-    }
+    canvasRef.current.removeEventListener('mousemove', handleScratch);
+    canvasRef.current.removeEventListener('touchmove', handleTouchScratch);
   };
 
   // Trigger the star burst effect
@@ -196,12 +193,12 @@ const ScratchCardComponent = () => {
           {(scratchedPercentage >= 60 || scratched) && quote && (
             <div className={`quote ${scratched ? 'revealed' : ''}`}>
               {quote}  
-              <img src={projectImage} height={50} width={50} alt="emoji"  className='emoji'/>   
+              <img src={projectImage} height={50} width={50} alt="emoji" className='emoji'/>   
             </div>
           )}
         </div>
       </div>
-    </div>
+    </div>    
   );
 };
 

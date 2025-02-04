@@ -1,8 +1,9 @@
 import React from 'react';
 import "./footer.css";
-import { FiTwitter, FiGithub, FiLinkedin, FiInstagram, FiHeart} from 'react-icons/fi';
-import {MdAlternateEmail, MdAddCall, MdOutlineLocationCity} from 'react-icons/md';
-import {FaArrowCircleRight} from 'react-icons/fa';
+import { FiTwitter, FiGithub, FiLinkedin, FiInstagram} from 'react-icons/fi';
+import { MdAddCall, MdKeyboardArrowLeft, MdEmail} from 'react-icons/md';
+import {FaLocationDot} from 'react-icons/fa6';
+import img from '../../assets/logo.png'
 
 const Footer = () => {
     return (
@@ -11,7 +12,7 @@ const Footer = () => {
                 
                 <div className='row'>
                     <div className='col-md-4'>
-                        <h5>Sanjay's Portfolio</h5>
+                        <h5> <img src={img} alt="logo" className='logo__container' />Sanjay's Portfolio</h5>
                         <p className='fs-6'>Thank you for visiting my personal portfolio website. Connect with me over socials.</p>
                         <p className='fs-6'>Keep Rising 🚀. Connect with me over live chat!</p></div>
                     <div className='col-md-4'>
@@ -19,19 +20,19 @@ const Footer = () => {
 
                         <ul className="footer__list">
                             <li>
-                                <a href="#home" className="footer__link fs-5"> <FaArrowCircleRight className='fs-6'/> Home</a>
+                                <a href="#home" className="footer__link fs-6"> <MdKeyboardArrowLeft  className='fs-5'/> Home</a>
                             </li>
                             <li>
-                                <a href="#about" className="footer__link fs-5"><FaArrowCircleRight className='fs-6'/> About</a>
+                                <a href="#about" className="footer__link fs-6"> <MdKeyboardArrowLeft  className='fs-5'/> About</a>
                             </li>
                             <li>
-                                <a href="#skills" className="footer__link fs-5"><FaArrowCircleRight className='fs-6'/> Skills</a>
+                                <a href="#skills" className="footer__link fs-6"> <MdKeyboardArrowLeft  className='fs-5'/> Skills</a>
                             </li>
                             <li>
-                                <a href="#portfolio" className="footer__link fs-5"><FaArrowCircleRight className='fs-6'/> Projects</a>
+                                <a href="#portfolio" className="footer__link fs-6"> <MdKeyboardArrowLeft  className='fs-5'/> Projects</a>
                             </li>
                             <li>
-                                <a href="#contact" className="footer__link fs-5"><FaArrowCircleRight className='fs-6'/> Contact</a>
+                                <a href="#contact" className="footer__link fs-6"> <MdKeyboardArrowLeft  className='fs-5'/> Contact</a>
                             </li>
 
                         </ul>
@@ -41,8 +42,8 @@ const Footer = () => {
                             <h5>Contact Info</h5>
                             <div className='fs-6'>
                                 <p><MdAddCall/>91 7904992249</p>
-                                <p ><MdAlternateEmail/> sanjayravikomathi@gmail.com</p>
-                                <p><MdOutlineLocationCity/>Tindivanam, Villupuram-604001</p></div>
+                                <p ><MdEmail /> sanjayravikomathi@gmail.com</p>
+                                <p><FaLocationDot />Tindivanam, Villupuram-604001</p></div>
 
 
                             <div className="footer__social">
@@ -68,7 +69,7 @@ const Footer = () => {
                 <span className="footer__copy"></span>
             </div>
             <hr />
-            <p className='fs-6 foot'>Designed with <FiHeart/> By Sanjay</p>
+            <p className='fs-6 foot'>Designed with  ❤️ By <b> @sanjay</b></p>
         </footer>
     );
 }

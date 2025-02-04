@@ -10,18 +10,31 @@ import Footer from './components/footer/Footer';
 import ScrollUp from './components/scrollup/ScrollUp';
 import Portfolio from './components/projects/Portfolio';
 import Scratch from './components/scratch/ScratchCard';
+import AutoMotionSlider from './components/automotionslider/AutoMotionSlider';
 
 const App = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
+  const [showAutoMotion, setShowAutoMotion] = useState(true); // Default to showing AutoMotionSlider
+  const [showSkills, setShowSkills] = useState(false); // Default to hiding Skills
 
   const toggleDarkMode = () => {
     setIsDarkMode((prevMode) => !prevMode);
   };
 
+  const toggleAutoMotionVisibility = () => {
+    setShowAutoMotion((prev) => !prev);
+    setShowSkills((prev) => !prev); // When AutoMotionSlider is toggled, toggle Skills visibility
+  };
+
+  const toggleSkillsVisibility = () => {
+    setShowSkills((prev) => !prev);
+    setShowAutoMotion((prev) => !prev); // When Skills is toggled, toggle AutoMotionSlider visibility
+  };
+
   return (
-    <div className="body ">
+    <div className="body">
       <div className="particles">
-        {[...Array(30)].map((_, index) => (
+        {[...Array(10)].map((_, index) => (
           <div
             key={index}
             className="particle"
@@ -38,11 +51,21 @@ const App = () => {
       <main className='main'>
         <Home />
         <About />
-        <Skills />
+        
+        {/* Render AutoMotionSlider with the toggle function passed as prop */}
+        {showAutoMotion && (
+          <AutoMotionSlider toggleVisibility={toggleAutoMotionVisibility} />
+        )}
+        
+        {/* Render Skills with the toggle function passed as prop */}
+        {showSkills && (
+          <Skills toggleVisibility={toggleSkillsVisibility} />
+        )}
+
         <Qualification />
         <Portfolio />
         <Contact />
-        <Scratch/>
+        <Scratch />
       </main>
       <Footer />
       <ScrollUp />

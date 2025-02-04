@@ -2,11 +2,6 @@
     border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-
-.footer__link {
-    color: rgb(103, 97, 97);  
-}
-
 .footer__title {
     text-align: center;
     margin-bottom: var(--mb-2);
@@ -15,6 +10,7 @@
 
 .footer__link:hover {
     color: var(--title-color-dark);
+    text-decoration: underline;
 }
 
 .footer__list {

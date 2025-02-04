@@ -90,6 +90,9 @@
     padding: 1.5rem;
     z-index: 1;
 }
+.contact__form-input:focus{
+    box-shadow: 2px 2px 3px 5px rgba(48, 244, 4, 0.4);
+}
  
 
 
@@ -151,4 +154,9 @@
     margin: 10px;
     width: 90%;
     height: 50%;
+}
+.logo__container{
+    width: 12%;
+    height: 12%;
+    border-radius: 50%;
 }

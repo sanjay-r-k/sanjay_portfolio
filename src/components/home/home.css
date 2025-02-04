@@ -14,6 +14,29 @@
     grid-template-columns: max-content;
     row-gap: 1rem;
 }
+/* Add this to your existing CSS */
+
+/* Define a keyframes animation for rotating */
+@keyframes rotateSmall {
+    0% {
+      transform: rotate(0deg); /* Start with no rotation */
+    }
+    25% {
+      transform: rotate(20deg); /* Rotate a small amount */
+    }
+    75% {
+      transform: rotate(-25deg); /* Rotate a small amount */
+    }
+    100% {
+      transform: rotate(0deg); /* Reset to the original position */
+    }
+  }
+  
+  /* Apply the animation to your target element */
+  .home__hand {
+    animation: rotateSmall 5s infinite; /* Apply the animation for 5 seconds and repeat infinitely */
+  }
+  
 
 .home__social-icon {
     font-size: 1.25rem;
@@ -223,12 +246,9 @@
   color: white !important;
 }
 
-
-
 .dark-mode .button__icon path {
   fill: white !important;
 }
 .dark-mode a:hover{
-
     color: var(--title-color-dark);
 }

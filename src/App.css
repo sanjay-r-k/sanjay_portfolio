@@ -141,10 +141,12 @@ img {
     padding: 1.25rem 2rem;
     border-radius: 1rem;
     font-weight: var(--font-medium);
+    transition: 0.4s ease-in-out; 
 }
 
 .button:hover {
     background-color: var(--title-color-dark);
+    transform: scaleX(1.05);
 }
 
 .button__icon {
@@ -336,3 +338,74 @@ body[data-theme='light'] .particle--dark::before {
 .header, .footer {
     z-index: 1; /* Ensure header and footer stay above particles */
 }
+/* Scroll Animations */
+@keyframes slideInLeft {
+    from {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideInRight {
+    from {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Apply to elements */
+  .scroll-left {
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .scroll-right {
+    opacity: 0;
+    transform: translateX(100%);
+    transition: all 0.5s ease-in-out;
+  }
+  
+  /* When elements are in view, apply the animation */
+  .is-visible.scroll-left {
+    opacity: 1;
+    transform: translateX(0);
+    animation: slideInLeft 1s forwards;
+  }
+  
+  .is-visible.scroll-right {
+    opacity: 1;
+    transform: translateX(0);
+    animation: slideInRight 1s forwards;
+  }
+  /* Parent container (apply this to the parent of the button, e.g., the body or a div) */
+.center-container {
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center;     /* Centers vertically */
+   margin: 5%;          /* Make sure the container takes the full viewport height */
+  }
+  
+  .skillToggleButton {
+    background-color: var(--title-color);
+    color: var(--container-color);
+    padding: 1.25rem 2rem;
+    border-radius: 1rem;
+    font-weight: var(--font-medium);
+    /* Optional: If you want the button to look more visually centered */
+    text-align: center;
+    transition: 0.4s ease-in-out; /* Ensures text inside the button is centered */
+  }
+  .skillToggleButton:hover{
+    background-color: var(--title-color-dark);
+    transform: scaleX(1.05);
+  }
+  

@@ -23,6 +23,8 @@
 .scratch-canvas {
   cursor: grab;
   border-radius: 20%;
+  width: 100%;
+  height: 100%;
 }
 
 .fullpage {
@@ -38,7 +40,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgb(236, 237, 232);
+  background: rgb(229, 243, 22);
   font-size: 18px;
   font-family: 'Arial', sans-serif;
   font-weight: bold;
@@ -81,7 +83,7 @@
   position: absolute;
   width: 12px;
   height: 12px;
-  background-color: rgb(201, 190, 39);
+  background-color: rgb(243, 229, 36);
   clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
   animation: starBurst 2s ease-out forwards;
 }
@@ -112,6 +114,7 @@
     transform: translate(-50%, -50%);
   }
 }
+
 .emoji{
   text-align: center;
   display: flex;

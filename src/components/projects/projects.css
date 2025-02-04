@@ -34,15 +34,16 @@
 }
 .project__card:hover{
     box-shadow: 1px 1px 2px 4px rgba(204, 178, 178, 0.5);
-    .project__img{
-        transform: scale(1.05);
-    }
+   
 }
-
+.project__img:hover{
+    transform: scale(1.05);
+}
 .project__img {
     width: 295px;
     border-radius: 1rem;
     margin-bottom: var(--mb-1);
+    transition: 0.4s ease-in-out;
 }
 
 .project__title {
@@ -181,10 +182,6 @@
     margin-bottom: 10px;
 }
 
-
-
-
-/* Service description */
 .services__modal-info {
     font-size: 14px;
 }

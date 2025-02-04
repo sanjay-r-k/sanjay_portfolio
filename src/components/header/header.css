@@ -44,6 +44,7 @@
 /* ACTIVE LINK */
 .active-link, .nav__link:hover {
     color: var(--title-color-dark);
+    text-decoration: underline;
 }
 
 /* CHANGE HEADER */

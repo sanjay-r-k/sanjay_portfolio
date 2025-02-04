@@ -1,0 +1,77 @@
+
+.slider-container {
+  width: 78%;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  margin: 11%;
+  margin-top: -2%;
+  
+}
+
+/* Slider content wrapper */
+.slider-content {
+  display: inline-block;
+  white-space: nowrap;
+  animation: marquee 30s linear infinite;
+  padding: 0;
+ 
+}
+
+/* Pause animation on hover */
+.slider-content.paused {
+  animation-play-state: paused;
+}
+
+/* Keyframes for marquee animation */
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-60%);
+  }
+}
+
+/* Individual slide styling */
+.slide {
+  display: inline-block;
+  width: 200px; /* Adjust based on your slide width */
+  /* Adjust spacing between slides */
+  text-align: center;
+  transition: transform 0.7s ease, box-shadow 0.7s ease;
+  transform-origin: center center;
+  margin-top: 2%;
+}
+
+/* Hover effect for slides */
+.slide.highlight {
+  transform: scale(1.2) rotateY(20deg); /* Scale and rotate on hover */
+  z-index: 1; 
+  font-weight: bold;
+  color: rgb(230, 247, 34);
+  border: none !important;
+
+  
+}
+.highlight>.icon {
+  background-color: rgb(230, 247, 34);
+  color: black;
+  border: none !important;
+}
+
+/* Icon styling */
+.icon {
+  font-size: 50px; /* Adjust icon size */
+  margin-bottom: 15px;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  padding: 30%;  
+}
+
+
+
+/* Add a slight 3D tilt to the entire slider */
+.slider-content {
+  transform: rotateX(10deg); 
+}
+

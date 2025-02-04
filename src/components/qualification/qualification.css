@@ -193,6 +193,7 @@
     padding: 50px 20px 20px 20px;
     box-sizing: border-box;
     box-shadow: 0 4px 8px 0 rgba(83, 83, 83, 0.2), 0 6px 20px 0 rgba(84, 84, 84, 0.5);
+   transition: 0.4s ease-in-out;
 }
 
 .codemac span {
@@ -202,6 +203,7 @@
 }
 .codemac:hover{
     box-shadow: 0 4px 8px 0 rgba(120, 148, 60, 0.1), 0 6px 20px 0 rgba(117, 153, 38, 0.6);
+    transform: scale(1.01);
 }
 .codemac .toolbar {
     position: absolute;
