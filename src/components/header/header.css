@@ -125,6 +125,10 @@
         column-gap: 0;
     }
 }
+.nav__menu{
+    opacity: 0.95;
+}
+
 
 /* Body and Dark Mode */
 body {
@@ -178,8 +182,8 @@ body {
 
 /* Dark mode for nav menu compartment */
 .dark-mode .nav__menu {
-    background-color: hsl(0, 0%, 1%); /* Dark background for the menu compartment */
- 
+    background-color: hsl(0, 0%, 1%);
+    opacity: 0.95; /* Dark background for the menu compartment */
 }
 
 /* Dark mode for nav links */
